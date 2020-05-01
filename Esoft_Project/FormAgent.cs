@@ -16,5 +16,18 @@ namespace Esoft_Project
         {
             InitializeComponent();
         }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Agents agentsSet = new Agents();
+            agentsSet.FirstName = textBoxFirstName.Text;
+            agentsSet.MiddleName = textBoxMiddleName.Text;
+            agentsSet.LastName = textBoxLastName.Text;
+            agentsSet.DealShare = Convert.ToInt32(textBoxDealshare.Text);
+            Program.wftDB.AgentsSet.Add(agentsSet);
+            Program.wftDB.SaveChanges();
+
+
+        }
     }
 }
