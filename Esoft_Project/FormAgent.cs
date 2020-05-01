@@ -15,6 +15,25 @@ namespace Esoft_Project
         public FormAgent()
         {
             InitializeComponent();
+            ShowAgent();
+        }
+        void ShowAgent()
+        {
+            listViewAgent.Items.Clear();
+            foreach (Agents agentsSet in Program.newDB.Agents)
+            {
+                ListViewItem item = new ListViewItem(new string[]
+                {
+                    agentsSet.ID.ToString(),
+                        agentsSet.FirstName ,
+                        agentsSet.MiddleName,
+                        agentsSet.LastName ,
+                       Convert.ToString (agentsSet.DealShare) 
+                });
+                item.Tag = agentsSet;
+                listViewAgent.Items.Add(item);
+            }
+            listViewAgent.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -24,9 +43,14 @@ namespace Esoft_Project
             agentsSet.MiddleName = textBoxMiddleName.Text;
             agentsSet.LastName = textBoxLastName.Text;
             agentsSet.DealShare = Convert.ToInt32(textBoxDealshare.Text);
-            Program.wftDB.AgentsSet.Add(agentsSet);
-            Program.wftDB.SaveChanges();
+            Program.newDB.Agents.Add(agentsSet);
+            Program.newDB.SaveChanges();
+            ShowAgent();
 
+        }
+
+        private void listViewAgent_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -10,6 +10,8 @@ namespace Esoft_Project
     {
         //создание статистического экземпляра класса модели ADO.EDM
         public static WFTutorialEntities1 wftDB = new WFTutorialEntities1();
+        
+        public static WFTutorial2Entities newDB = new WFTutorial2Entities(); 
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

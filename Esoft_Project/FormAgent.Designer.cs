@@ -118,6 +118,7 @@
             this.listViewAgent.TabIndex = 8;
             this.listViewAgent.UseCompatibleStateImageBehavior = false;
             this.listViewAgent.View = System.Windows.Forms.View.Details;
+            this.listViewAgent.SelectedIndexChanged += new System.EventHandler(this.listViewAgent_SelectedIndexChanged);
             // 
             // buttonAdd
             // 
