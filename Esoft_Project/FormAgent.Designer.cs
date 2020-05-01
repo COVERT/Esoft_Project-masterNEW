@@ -28,108 +28,141 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.textBoxMiddleName = new System.Windows.Forms.TextBox();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
+            this.textBoxDealshare = new System.Windows.Forms.TextBox();
+            this.labelFirstName = new System.Windows.Forms.Label();
+            this.labelMiddleName = new System.Windows.Forms.Label();
+            this.labelLastName = new System.Windows.Forms.Label();
+            this.llabelDealshare = new System.Windows.Forms.Label();
+            this.listViewAgent = new System.Windows.Forms.ListView();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonDel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxFirstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxFirstName.Location = new System.Drawing.Point(12, 56);
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFirstName.TabIndex = 0;
             // 
-            // textBox2
+            // textBoxMiddleName
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBoxMiddleName.Location = new System.Drawing.Point(12, 106);
+            this.textBoxMiddleName.Name = "textBoxMiddleName";
+            this.textBoxMiddleName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMiddleName.TabIndex = 1;
             // 
-            // textBox3
+            // textBoxLastName
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 161);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.textBoxLastName.Location = new System.Drawing.Point(12, 161);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLastName.TabIndex = 2;
             // 
-            // textBox4
+            // textBoxDealshare
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 211);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.textBoxDealshare.Location = new System.Drawing.Point(12, 211);
+            this.textBoxDealshare.Name = "textBoxDealshare";
+            this.textBoxDealshare.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDealshare.TabIndex = 3;
             // 
-            // label1
+            // labelFirstName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.labelFirstName.AutoSize = true;
+            this.labelFirstName.Location = new System.Drawing.Point(13, 37);
+            this.labelFirstName.Name = "labelFirstName";
+            this.labelFirstName.Size = new System.Drawing.Size(29, 13);
+            this.labelFirstName.TabIndex = 4;
+            this.labelFirstName.Text = "Имя";
             // 
-            // label2
+            // labelMiddleName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
+            this.labelMiddleName.AutoSize = true;
+            this.labelMiddleName.Location = new System.Drawing.Point(13, 90);
+            this.labelMiddleName.Name = "labelMiddleName";
+            this.labelMiddleName.Size = new System.Drawing.Size(54, 13);
+            this.labelMiddleName.TabIndex = 5;
+            this.labelMiddleName.Text = "Отчество";
             // 
-            // label3
+            // labelLastName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 145);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "label3";
+            this.labelLastName.AutoSize = true;
+            this.labelLastName.Location = new System.Drawing.Point(13, 145);
+            this.labelLastName.Name = "labelLastName";
+            this.labelLastName.Size = new System.Drawing.Size(56, 13);
+            this.labelLastName.TabIndex = 6;
+            this.labelLastName.Text = "Фамилия";
             // 
-            // label4
+            // llabelDealshare
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 195);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "label4";
+            this.llabelDealshare.AutoSize = true;
+            this.llabelDealshare.Location = new System.Drawing.Point(13, 195);
+            this.llabelDealshare.Name = "llabelDealshare";
+            this.llabelDealshare.Size = new System.Drawing.Size(57, 13);
+            this.llabelDealshare.TabIndex = 7;
+            this.llabelDealshare.Text = "Проченты";
             // 
-            // listView1
+            // listViewAgent
             // 
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(118, 56);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(502, 175);
-            this.listView1.TabIndex = 8;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewAgent.FullRowSelect = true;
+            this.listViewAgent.GridLines = true;
+            this.listViewAgent.HideSelection = false;
+            this.listViewAgent.Location = new System.Drawing.Point(118, 56);
+            this.listViewAgent.MultiSelect = false;
+            this.listViewAgent.Name = "listViewAgent";
+            this.listViewAgent.Size = new System.Drawing.Size(502, 175);
+            this.listViewAgent.TabIndex = 8;
+            this.listViewAgent.UseCompatibleStateImageBehavior = false;
+            this.listViewAgent.View = System.Windows.Forms.View.Details;
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(383, 238);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 9;
+            this.buttonAdd.Text = "Создать";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Location = new System.Drawing.Point(464, 238);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdit.TabIndex = 10;
+            this.buttonEdit.Text = "Изменить";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            // 
+            // buttonDel
+            // 
+            this.buttonDel.Location = new System.Drawing.Point(545, 238);
+            this.buttonDel.Name = "buttonDel";
+            this.buttonDel.Size = new System.Drawing.Size(75, 23);
+            this.buttonDel.TabIndex = 11;
+            this.buttonDel.Text = "Удалить";
+            this.buttonDel.UseVisualStyleBackColor = true;
             // 
             // FormAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buttonDel);
+            this.Controls.Add(this.buttonEdit);
+            this.Controls.Add(this.buttonAdd);
+            this.Controls.Add(this.listViewAgent);
+            this.Controls.Add(this.llabelDealshare);
+            this.Controls.Add(this.labelLastName);
+            this.Controls.Add(this.labelMiddleName);
+            this.Controls.Add(this.labelFirstName);
+            this.Controls.Add(this.textBoxDealshare);
+            this.Controls.Add(this.textBoxLastName);
+            this.Controls.Add(this.textBoxMiddleName);
+            this.Controls.Add(this.textBoxFirstName);
             this.Name = "FormAgent";
             this.Text = "FormAgent";
             this.ResumeLayout(false);
@@ -139,14 +172,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.TextBox textBoxFirstName;
+        private System.Windows.Forms.TextBox textBoxMiddleName;
+        private System.Windows.Forms.TextBox textBoxLastName;
+        private System.Windows.Forms.TextBox textBoxDealshare;
+        private System.Windows.Forms.Label labelFirstName;
+        private System.Windows.Forms.Label labelMiddleName;
+        private System.Windows.Forms.Label labelLastName;
+        private System.Windows.Forms.Label llabelDealshare;
+        private System.Windows.Forms.ListView listViewAgent;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button buttonDel;
     }
 }
