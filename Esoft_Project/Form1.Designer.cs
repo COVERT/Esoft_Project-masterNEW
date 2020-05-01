@@ -66,6 +66,7 @@
             this.buttonOpenAgents.TabIndex = 2;
             this.buttonOpenAgents.Text = "риелторы";
             this.buttonOpenAgents.UseVisualStyleBackColor = true;
+            this.buttonOpenAgents.Click += new System.EventHandler(this.buttonOpenAgents_Click);
             // 
             // buttonOpenRealEstates
             // 

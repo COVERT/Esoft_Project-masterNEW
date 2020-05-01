@@ -19,6 +19,8 @@ namespace Esoft_Project
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Menu());
+            Application.Run(new FormClient());
+            Application.Run(new FormAgent());
         }
     }
 }

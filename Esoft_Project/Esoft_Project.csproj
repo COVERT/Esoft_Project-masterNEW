@@ -55,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agents.cs">
+      <DependentUpon>ModelTutorial2.tt</DependentUpon>
+    </Compile>
     <Compile Include="ClientsSet.cs">
       <DependentUpon>modelTutorial.tt</DependentUpon>
     </Compile>
@@ -63,6 +66,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgent.Designer.cs">
+      <DependentUpon>FormAgent.cs</DependentUpon>
     </Compile>
     <Compile Include="FormClient.cs">
       <SubType>Form</SubType>
@@ -85,10 +94,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>modelTutorial.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ModelTutorial2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTutorial2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelTutorial2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTutorial2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelTutorial2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTutorial2.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgent.resx">
+      <DependentUpon>FormAgent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormClient.resx">
       <DependentUpon>FormClient.cs</DependentUpon>
@@ -109,6 +136,13 @@
     </EntityDeploy>
     <None Include="modelTutorial.edmx.diagram">
       <DependentUpon>modelTutorial.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="ModelTutorial2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelTutorial2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelTutorial2.edmx.diagram">
+      <DependentUpon>ModelTutorial2.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -140,6 +174,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>modelTutorial.edmx</DependentUpon>
       <LastGenOutput>modelTutorial.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelTutorial2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTutorial2.edmx</DependentUpon>
+      <LastGenOutput>ModelTutorial2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelTutorial2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTutorial2.edmx</DependentUpon>
+      <LastGenOutput>ModelTutorial2.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
