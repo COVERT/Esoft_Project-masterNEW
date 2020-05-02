@@ -12,12 +12,12 @@ namespace Esoft_Project
     using System;
     using System.Collections.Generic;
     
-    public partial class Agents
+    public partial class AgentsSet
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
-        public int DealShare { get; set; }
+        public Nullable<int> DealShare { get; set; }
     }
 }

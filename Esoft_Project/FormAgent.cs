@@ -20,15 +20,15 @@ namespace Esoft_Project
         void ShowAgent()
         {
             listViewAgent.Items.Clear();
-            foreach (Agents agentsSet in Program.newDB.Agents)
+            foreach (AgentsSet agentsSet in Program.wftDB.AgentsSet)
             {
                 ListViewItem item = new ListViewItem(new string[]
                 {
-                    agentsSet.ID.ToString(),
+                    agentsSet.Id.ToString(),
                         agentsSet.FirstName ,
                         agentsSet.MiddleName,
                         agentsSet.LastName ,
-                       Convert.ToString (agentsSet.DealShare) 
+                       Convert.ToString (agentsSet.DealShare)
                 });
                 item.Tag = agentsSet;
                 listViewAgent.Items.Add(item);
@@ -38,20 +38,76 @@ namespace Esoft_Project
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            Agents agentsSet = new Agents();
+            AgentsSet agentsSet = new AgentsSet();
             agentsSet.FirstName = textBoxFirstName.Text;
             agentsSet.MiddleName = textBoxMiddleName.Text;
             agentsSet.LastName = textBoxLastName.Text;
             agentsSet.DealShare = Convert.ToInt32(textBoxDealshare.Text);
-            Program.newDB.Agents.Add(agentsSet);
-            Program.newDB.SaveChanges();
+            Program.wftDB.AgentsSet.Add(agentsSet);
+            Program.wftDB.SaveChanges();
             ShowAgent();
 
         }
 
         private void listViewAgent_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listViewAgent.SelectedItems.Count == 1)
+            {
+                AgentsSet agentsSet = listViewAgent.SelectedItems[0].Tag as AgentsSet;
+                textBoxFirstName.Text = agentsSet.FirstName;
+                textBoxMiddleName.Text = agentsSet.MiddleName;
+                textBoxLastName.Text = agentsSet.LastName;
+                textBoxDealshare.Text = Convert.ToString(agentsSet.DealShare);
 
+
+            }
+            else
+            {
+                textBoxFirstName.Text = "";
+                textBoxMiddleName.Text = "";
+                textBoxLastName.Text = "";
+                textBoxDealshare.Text = "";
+
+
+            }
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            if (listViewAgent.SelectedItems.Count == 1)
+            {
+                AgentsSet agentsSet = listViewAgent.SelectedItems[0].Tag as AgentsSet;
+                agentsSet.FirstName = textBoxFirstName.Text;
+                agentsSet.MiddleName = textBoxMiddleName.Text;
+                agentsSet.LastName = textBoxLastName.Text;
+                agentsSet.DealShare = Convert.ToInt32(textBoxDealshare.Text);
+                Program.wftDB.SaveChanges();
+                ShowAgent();
+            }
+        }
+
+        private void buttonDel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                if (listViewAgent.SelectedItems.Count == 1)
+                {
+                    AgentsSet agentsSet = listViewAgent.SelectedItems[0].Tag as AgentsSet;
+                    Program.wftDB.AgentsSet.Remove(agentsSet);
+                    Program.wftDB.SaveChanges();
+                    ShowAgent();
+                }
+                textBoxFirstName.Text = "";
+                textBoxMiddleName.Text = "";
+                textBoxLastName.Text = "";
+                textBoxDealshare.Text = "";
+            }
+            catch
+            {
+                MessageBox.Show("не возможно удалить эту запись, эта запись используется!", "ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
