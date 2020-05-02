@@ -227,19 +227,19 @@ namespace Esoft_Project
                     }
                 }
                 else
-                {
-                    RealEstateSet realEstate = listViewRealEstateSet_Land.SelectedItems[0].Tag as RealEstateSet;
-                    realEstate.Address_City = textBoxAddress_City.Text;
-                    realEstate.Address_Hoyse = textBoxAddress_House.Text;
-                    realEstate.Address_Street = textBoxAddress_Street.Text;
-                    realEstate.Address_Number = textBoxAddress_Number.Text;
-                    realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
-                    realEstate.TotalFloors = Convert.ToInt32(textBoxTotalFloors.Text);
-                    realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
-                    realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
-                    realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
-                    Program.wftDB.SaveChanges();
-                    ShowRealEstateSet(); 
+                {  if (listViewRealEstateSet_Land.SelectedItems.Count == 1)
+                    {
+                        RealEstateSet realEstate = listViewRealEstateSet_Land.SelectedItems[0].Tag as RealEstateSet;
+                        realEstate.Address_City = textBoxAddress_City.Text;
+                        realEstate.Address_Hoyse = textBoxAddress_House.Text;
+                        realEstate.Address_Street = textBoxAddress_Street.Text;
+                        realEstate.Address_Number = textBoxAddress_Number.Text;
+                        realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);                        
+                        realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
+                        realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
+                        Program.wftDB.SaveChanges();
+                        ShowRealEstateSet();
+                    }
                 }
             }
 
@@ -308,7 +308,7 @@ namespace Esoft_Project
         {
             if (listViewRealEstateSet_Land.SelectedItems.Count == 1)
             {
-                RealEstateSet realEstate = listViewRealEstateSet_House.SelectedItems[0].Tag as RealEstateSet;
+                RealEstateSet realEstate = listViewRealEstateSet_Land.SelectedItems[0].Tag as RealEstateSet;
                 textBoxAddress_City.Text = realEstate.Address_City;
                 textBoxAddress_Street.Text = realEstate.Address_Street;
                 textBoxAddress_House.Text = realEstate.Address_Hoyse;
