@@ -32,7 +32,7 @@ namespace Esoft_Project
                    {
                        realEstate.Address_City,
                        realEstate.Address_Street,
-                       realEstate.Address_Hoyse,
+                       realEstate.Address_Hoyse, 
                        realEstate.Address_Number,
                        realEstate.Coordinate_latitude.ToString(),
                        realEstate.Coordinate_longitude.ToString(),
@@ -43,10 +43,11 @@ namespace Esoft_Project
                     item.Tag = realEstate;
                     listViewRealEstateSet_Apartment.Items.Add(item);
                 }
-                else if(realEstate.Type==1)
-                {
-                    ListViewItem item = new ListViewItem(new string[]
-                    {
+                else if (realEstate.Type == 1)
+                {  
+                    
+                        ListViewItem item = new ListViewItem(new string[]
+                        {
                        realEstate.Address_City,
                        realEstate.Address_Street,
                        realEstate.Address_Hoyse,
@@ -55,7 +56,8 @@ namespace Esoft_Project
                        realEstate.Coordinate_longitude.ToString(),
                        realEstate.TotalArea.ToString(),
                        realEstate.TotalFloors.ToString()
-                    });
+                        });
+                    
                     item.Tag = realEstate;
                     listViewRealEstateSet_House.Items.Add(item);
                 }
@@ -158,6 +160,7 @@ namespace Esoft_Project
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+
             RealEstateSet realEstate = new RealEstateSet();
             //ссылки на обьекты
             realEstate.Address_City = textBoxAddress_City.Text;
@@ -206,7 +209,7 @@ namespace Esoft_Project
                     realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
                     realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
                     realEstate.Rooms = Convert.ToInt32(textBoxRooms.Text);
-                    realEstate.TotalFloors = Convert.ToInt32(textBoxTotalFloors.Text);
+                    realEstate.Floor = Convert.ToInt32(textBoxFloor.Text);
                     Program.wftDB.SaveChanges();
                     ShowRealEstateSet();
                 }
@@ -226,20 +229,20 @@ namespace Esoft_Project
                         ShowRealEstateSet();
                     }
                 }
-                else
-                {  if (listViewRealEstateSet_Land.SelectedItems.Count == 1)
-                    {
+                else if (listViewRealEstateSet_Land.SelectedItems.Count == 1)
+                {  
+                    
                         RealEstateSet realEstate = listViewRealEstateSet_Land.SelectedItems[0].Tag as RealEstateSet;
                         realEstate.Address_City = textBoxAddress_City.Text;
                         realEstate.Address_Hoyse = textBoxAddress_House.Text;
                         realEstate.Address_Street = textBoxAddress_Street.Text;
-                        realEstate.Address_Number = textBoxAddress_Number.Text;
-                        realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);                        
+                        realEstate.Address_Number = textBoxAddress_Number.Text;                        
                         realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
                         realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
+                        realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
                         Program.wftDB.SaveChanges();
                         ShowRealEstateSet();
-                    }
+                    
                 }
             }
 
@@ -330,6 +333,72 @@ namespace Esoft_Project
                 textBoxTotalArea.Text = "";
 
                 
+            }
+        }
+
+        private void buttonDel_Click(object sender, EventArgs e)
+        {
+           try
+            {
+                if(comboBoxType.SelectedIndex==0)
+                {
+                    if(listViewRealEstateSet_Apartment.SelectedItems.Count==1)
+                    {
+                        RealEstateSet realEstate = listViewRealEstateSet_Apartment.SelectedItems[0].Tag as RealEstateSet;
+                            Program.wftDB.RealEstateSet.Remove(realEstate);
+                        Program.wftDB.SaveChanges();
+                        ShowRealEstateSet();
+
+                    }
+                    textBoxAddress_City.Text = "";
+                    textBoxAddress_House.Text = "";
+                    textBoxAddress_Street.Text = "";
+                    textBoxAddress_Number.Text = " ";
+                    textBoxCoordinate_latitude.Text = "";
+                    textBoxCoordinate_longitude.Text = "";
+                    textBoxTotalArea.Text = "";
+                    textBoxRooms.Text = "";
+                    textBoxFloor.Text = "";
+
+                }
+                else if(comboBoxType.SelectedIndex==1)
+                {
+                    if(listViewRealEstateSet_House.SelectedItems.Count==1)
+                    {
+                        RealEstateSet realEstate = listViewRealEstateSet_House.SelectedItems[0].Tag as RealEstateSet;
+                        Program.wftDB.RealEstateSet.Remove(realEstate);
+                        Program.wftDB.SaveChanges();
+                        ShowRealEstateSet();
+                    }
+                    textBoxAddress_City.Text = "";
+                    textBoxAddress_House.Text = "";
+                    textBoxAddress_Street.Text = "";
+                    textBoxAddress_Number.Text = " ";
+                    textBoxCoordinate_latitude.Text = "";
+                    textBoxCoordinate_longitude.Text = "";
+                    textBoxTotalArea.Text = "";
+                    textBoxTotalFloors.Text = "";
+                }
+                else
+                {
+                    if(listViewRealEstateSet_Land.SelectedItems.Count==1)
+                    {
+                        RealEstateSet realEstate = listViewRealEstateSet_Land.SelectedItems[0].Tag as RealEstateSet;
+                        Program.wftDB.RealEstateSet.Remove(realEstate);
+                        Program.wftDB.SaveChanges();
+                        ShowRealEstateSet();
+                    }
+                    textBoxAddress_City.Text = "";
+                    textBoxAddress_House.Text = "";
+                    textBoxAddress_Street.Text = "";
+                    textBoxAddress_Number.Text = "";
+                    textBoxCoordinate_latitude.Text = "";
+                    textBoxCoordinate_longitude.Text = "";
+                }
+            }
+            catch
+            {
+                MessageBox.Show(" не возможно удалить");
             }
         }
     }
