@@ -37,14 +37,16 @@
             this.labelLastName = new System.Windows.Forms.Label();
             this.llabelDealshare = new System.Windows.Forms.Label();
             this.listViewAgent = new System.Windows.Forms.ListView();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonEdit = new System.Windows.Forms.Button();
-            this.buttonDel = new System.Windows.Forms.Button();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonDel = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxFirstName
@@ -131,6 +133,26 @@
             this.listViewAgent.View = System.Windows.Forms.View.Details;
             this.listViewAgent.SelectedIndexChanged += new System.EventHandler(this.listViewAgent_SelectedIndexChanged);
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Id";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Имя";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Отчество";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Фмилия";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Проценты";
+            // 
             // buttonAdd
             // 
             this.buttonAdd.Location = new System.Drawing.Point(383, 238);
@@ -161,31 +183,22 @@
             this.buttonDel.UseVisualStyleBackColor = true;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
-            // columnHeader1
+            // pictureBox1
             // 
-            this.columnHeader1.Text = "Id";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Имя";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Отчество";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Фмилия";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Проценты";
+            this.pictureBox1.Image = global::Esoft_Project.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(688, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // FormAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
@@ -200,6 +213,7 @@
             this.Controls.Add(this.textBoxFirstName);
             this.Name = "FormAgent";
             this.Text = "FormAgent";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +238,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

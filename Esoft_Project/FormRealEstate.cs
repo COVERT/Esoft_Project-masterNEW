@@ -225,7 +225,7 @@ namespace Esoft_Project
                     realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
                     realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
                     realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
-                    realEstate.TotalFloors = Convert.ToInt32(textBoxTotalFloors.Text);
+                    
                     Program.wftDB.SaveChanges();
                     ShowRealEstateSet();
                 }
@@ -291,8 +291,7 @@ namespace Esoft_Project
                 textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
                 textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
                 textBoxTotalArea.Text = realEstate.TotalArea.ToString();
-                
-                textBoxFloor.Text = realEstate.Floor.ToString();
+                textBoxTotalFloors.Text = realEstate.TotalFloors.ToString();
             }
             else
             {
@@ -303,8 +302,7 @@ namespace Esoft_Project
                 textBoxCoordinate_latitude.Text = "";
                 textBoxCoordinate_longitude.Text = "";
                 textBoxTotalArea.Text = "";
-                
-                textBoxFloor.Text = "";
+                textBoxTotalFloors.Text = "";
             }
         }
 
@@ -320,8 +318,6 @@ namespace Esoft_Project
                 textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
                 textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
                 textBoxTotalArea.Text = realEstate.TotalArea.ToString();
-
-                
             }
             else
             {
@@ -333,7 +329,6 @@ namespace Esoft_Project
                 textBoxCoordinate_longitude.Text = "";
                 textBoxTotalArea.Text = "";
 
-                
             }
         }
 
