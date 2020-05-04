@@ -40,5 +40,17 @@ namespace Esoft_Project
             Form formRealEstate = new FormRealEstate();
             formRealEstate.Show();
         }
+
+        private void buttonOpenSupplies_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonOpenDemands_Click(object sender, EventArgs e)
+        {
+            Form formSupply = new FormSupply();
+            formSupply.Show();
+
+        }
     }
 }

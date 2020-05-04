@@ -23,6 +23,7 @@ namespace Esoft_Project
             Application.Run(new Menu());
             Application.Run(new FormClient());
             Application.Run(new FormAgent());
+            Application.Run(new FormSupply());
         }
     }
 }
