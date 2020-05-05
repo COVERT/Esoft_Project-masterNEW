@@ -50,8 +50,15 @@
             this.labelTotalFloors = new System.Windows.Forms.Label();
             this.labelType = new System.Windows.Forms.Label();
             this.listViewRealEstateSet_Land = new System.Windows.Forms.ListView();
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listViewRealEstateSet_Apartment = new System.Windows.Forms.ListView();
-            this.listViewRealEstateSet_House = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -61,6 +68,7 @@
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listViewRealEstateSet_House = new System.Windows.Forms.ListView();
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -68,14 +76,6 @@
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
@@ -277,6 +277,39 @@
             this.listViewRealEstateSet_Land.Visible = false;
             this.listViewRealEstateSet_Land.SelectedIndexChanged += new System.EventHandler(this.listViewRealEstateSet_Land_SelectedIndexChanged);
             // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "Город";
+            // 
+            // columnHeader26
+            // 
+            this.columnHeader26.Text = "Улица";
+            // 
+            // columnHeader27
+            // 
+            this.columnHeader27.Text = "Номер дома";
+            // 
+            // columnHeader28
+            // 
+            this.columnHeader28.Text = "Номер квартиры";
+            // 
+            // columnHeader29
+            // 
+            this.columnHeader29.Text = "Ширина";
+            // 
+            // columnHeader30
+            // 
+            this.columnHeader30.Text = "Долгота";
+            // 
+            // columnHeader31
+            // 
+            this.columnHeader31.Text = "Площадь";
+            // 
+            // columnHeader32
+            // 
+            this.columnHeader32.Text = "Количество этажей";
+            this.columnHeader32.Width = 121;
+            // 
             // listViewRealEstateSet_Apartment
             // 
             this.listViewRealEstateSet_Apartment.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -292,7 +325,7 @@
             this.listViewRealEstateSet_Apartment.FullRowSelect = true;
             this.listViewRealEstateSet_Apartment.GridLines = true;
             this.listViewRealEstateSet_Apartment.HideSelection = false;
-            this.listViewRealEstateSet_Apartment.Location = new System.Drawing.Point(134, 22);
+            this.listViewRealEstateSet_Apartment.Location = new System.Drawing.Point(134, 91);
             this.listViewRealEstateSet_Apartment.MultiSelect = false;
             this.listViewRealEstateSet_Apartment.Name = "listViewRealEstateSet_Apartment";
             this.listViewRealEstateSet_Apartment.Size = new System.Drawing.Size(638, 68);
@@ -300,29 +333,6 @@
             this.listViewRealEstateSet_Apartment.UseCompatibleStateImageBehavior = false;
             this.listViewRealEstateSet_Apartment.View = System.Windows.Forms.View.Details;
             this.listViewRealEstateSet_Apartment.SelectedIndexChanged += new System.EventHandler(this.listViewRealEstateSet_Apartment_SelectedIndexChanged);
-            // 
-            // listViewRealEstateSet_House
-            // 
-            this.listViewRealEstateSet_House.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader13,
-            this.columnHeader14,
-            this.columnHeader15,
-            this.columnHeader16,
-            this.columnHeader17,
-            this.columnHeader18,
-            this.columnHeader19});
-            this.listViewRealEstateSet_House.FullRowSelect = true;
-            this.listViewRealEstateSet_House.GridLines = true;
-            this.listViewRealEstateSet_House.HideSelection = false;
-            this.listViewRealEstateSet_House.Location = new System.Drawing.Point(134, 22);
-            this.listViewRealEstateSet_House.MultiSelect = false;
-            this.listViewRealEstateSet_House.Name = "listViewRealEstateSet_House";
-            this.listViewRealEstateSet_House.Size = new System.Drawing.Size(638, 68);
-            this.listViewRealEstateSet_House.TabIndex = 23;
-            this.listViewRealEstateSet_House.UseCompatibleStateImageBehavior = false;
-            this.listViewRealEstateSet_House.View = System.Windows.Forms.View.Details;
-            this.listViewRealEstateSet_House.Visible = false;
-            this.listViewRealEstateSet_House.SelectedIndexChanged += new System.EventHandler(this.listViewRealEstateSet_House_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -361,6 +371,29 @@
             // 
             this.columnHeader9.Text = "Этаж";
             // 
+            // listViewRealEstateSet_House
+            // 
+            this.listViewRealEstateSet_House.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19});
+            this.listViewRealEstateSet_House.FullRowSelect = true;
+            this.listViewRealEstateSet_House.GridLines = true;
+            this.listViewRealEstateSet_House.HideSelection = false;
+            this.listViewRealEstateSet_House.Location = new System.Drawing.Point(134, 165);
+            this.listViewRealEstateSet_House.MultiSelect = false;
+            this.listViewRealEstateSet_House.Name = "listViewRealEstateSet_House";
+            this.listViewRealEstateSet_House.Size = new System.Drawing.Size(638, 68);
+            this.listViewRealEstateSet_House.TabIndex = 23;
+            this.listViewRealEstateSet_House.UseCompatibleStateImageBehavior = false;
+            this.listViewRealEstateSet_House.View = System.Windows.Forms.View.Details;
+            this.listViewRealEstateSet_House.Visible = false;
+            this.listViewRealEstateSet_House.SelectedIndexChanged += new System.EventHandler(this.listViewRealEstateSet_House_SelectedIndexChanged);
+            // 
             // columnHeader13
             // 
             this.columnHeader13.Text = "Город";
@@ -388,39 +421,6 @@
             // columnHeader19
             // 
             this.columnHeader19.Text = "Площадь";
-            // 
-            // columnHeader25
-            // 
-            this.columnHeader25.Text = "Город";
-            // 
-            // columnHeader26
-            // 
-            this.columnHeader26.Text = "Улица";
-            // 
-            // columnHeader27
-            // 
-            this.columnHeader27.Text = "Номер дома";
-            // 
-            // columnHeader28
-            // 
-            this.columnHeader28.Text = "Номер квартиры";
-            // 
-            // columnHeader29
-            // 
-            this.columnHeader29.Text = "Ширина";
-            // 
-            // columnHeader30
-            // 
-            this.columnHeader30.Text = "Долгота";
-            // 
-            // columnHeader31
-            // 
-            this.columnHeader31.Text = "Площадь";
-            // 
-            // columnHeader32
-            // 
-            this.columnHeader32.Text = "Количество этажей";
-            this.columnHeader32.Width = 121;
             // 
             // buttonAdd
             // 

@@ -61,6 +61,15 @@
     <Compile Include="ClientsSet.cs">
       <DependentUpon>ModelTutorial.tt</DependentUpon>
     </Compile>
+    <Compile Include="DemandSet.cs">
+      <DependentUpon>ModelTutorial.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormDemand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDemand.Designer.cs">
+      <DependentUpon>FormDemand.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +123,9 @@
     <Compile Include="SupplySet.cs">
       <DependentUpon>ModelTutorial.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormDemand.resx">
+      <DependentUpon>FormDemand.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSupply.resx">
       <DependentUpon>FormSupply.cs</DependentUpon>
     </EmbeddedResource>

@@ -43,7 +43,8 @@ namespace Esoft_Project
 
         private void buttonOpenSupplies_Click(object sender, EventArgs e)
         {
-            
+            Form FormDemand = new FormDemand();
+            FormDemand.Show();
         }
 
         private void buttonOpenDemands_Click(object sender, EventArgs e)
