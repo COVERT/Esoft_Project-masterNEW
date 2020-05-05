@@ -87,7 +87,7 @@ namespace Esoft_Project
                     supply.IdRealEstate.ToString(),
                     supply.RealEstateSet.Address_City+""+supply.RealEstateSet.Address_Street+""+supply.RealEstateSet.Address_Hoyse+""+supply.RealEstateSet.Address_Number,
                     supply.Price.ToString()
-                });;
+                });
                 item.Tag = supply;
                 listViewSupplySet.Items.Add(item);
             }

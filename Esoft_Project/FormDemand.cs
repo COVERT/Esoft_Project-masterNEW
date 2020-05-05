@@ -18,6 +18,7 @@ namespace Esoft_Project
             ShowAgents();
             ShowClients();
             ShowRealEstate();
+            ShowRealEstateSet();
         }
 
         void ShowAgents()
@@ -73,6 +74,50 @@ namespace Esoft_Project
             }
 
         }
+        void ShowSupplySet()
+        {
+            listViewRealEstateSet_Land.Items.Clear();
+            foreach (DemandSet demand in Program.wftDB.DemandSet)
+            {
+                ListViewItem item = new ListViewItem(new string[]
+                {
+                  demand.IdAgent.ToString(),
+                  demand.IdClient.ToString(),
+                  demand.Type.ToString(),
+                  demand.MinPrice.ToString(),
+                  demand.MaxPrice.ToString(),
+                  demand.MaxRooms.ToString(),
+                  demand.MinRooms.ToString(),
+                  demand.MinArea.ToString(),
+                  demand.MaxArea.ToString(),
+                  demand.MinFloor.ToString(),
+                }); 
+                item.Tag = demand;
+                listViewRealEstateSet_Land.Items.Add(item);
+            }
+        }
+        void ShowRealEstateSet()
+        {
+            listViewRealEstateSet_Land.Items.Clear();
+            foreach (DemandSet demand in Program.wftDB.DemandSet)
+            {
+                ListViewItem item = new ListViewItem(new string[]
+                    {
+                         demand.IdAgent.ToString(),
+                         demand.IdClient.ToString(),
+                         demand.MinPrice.ToString(),
+                         demand.MaxPrice.ToString(),
+                         demand.MaxRooms.ToString(),
+                         demand.MinRooms.ToString(),
+                         demand.MinArea.ToString(),
+                         demand.MaxArea .ToString(),
+                         demand.MinFloor.ToString()
+                     });
+                item.Tag = demand;
+                listViewRealEstateSet_Land.Items.Add(item);
+            }
+
+        }
 
         private void labelRealEstate_Click(object sender, EventArgs e)
         {
@@ -88,18 +133,9 @@ namespace Esoft_Project
         {
             if (comboBoxAgents.SelectedItem != null &&
                 comboBoxClients.SelectedItem != null && 
-                comboBoxRealEstate.SelectedItem != null && 
-                textBoxMinPrice.Text != " "&&
-                textBoxMaxPrice.Text != " " &&
-                textBoxMinRooms.Text != " " &&
-                textBoxMaxRooms.Text != " "&&
-                textBoxMinFloors.Text != " "&&
-                textBoxMaxFloors.Text != " " &&
-                textBoxMaxFloor.Text != " " &&
-                textBoxMinFloor.Text != " " &&
-                textBoxMinArea.Text != " " &&
-                textBoxMaxArea.Text != " ")
-            {
+                comboBoxRealEstate.SelectedItem != null )
+                
+            {  
                 //создаем новый эл в класс предложений
                 DemandSet demand = new DemandSet();
                 //отделяем id и делаем ссылку на суппле
@@ -110,7 +146,10 @@ namespace Esoft_Project
                 demand.MaxRooms = Convert.ToInt32(textBoxMaxRooms.Text);
                 demand.MinRooms = Convert.ToInt32(textBoxMinRooms.Text);
                 demand.MinArea = Convert.ToInt32(textBoxMinArea.Text);
+                demand.MaxArea = Convert.ToInt32(textBoxMaxArea.Text);
+                demand.MinFloor = Convert.ToInt32(textBoxMinFloor.Text);
                 Program.wftDB.DemandSet.Add(demand);
+                ShowRealEstateSet();
                 Program.wftDB.SaveChanges();
                 
             }
