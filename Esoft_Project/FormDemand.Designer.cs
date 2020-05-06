@@ -30,7 +30,7 @@
         {
             this.comboBoxAgents = new System.Windows.Forms.ComboBox();
             this.comboBoxClients = new System.Windows.Forms.ComboBox();
-            this.comboBoxRealEstate = new System.Windows.Forms.ComboBox();
+            this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.textBoxMinPrice = new System.Windows.Forms.TextBox();
             this.textBoxMinArea = new System.Windows.Forms.TextBox();
             this.textBoxMinRooms = new System.Windows.Forms.TextBox();
@@ -71,6 +71,20 @@
             this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listViewRealEstateSet_Apartment = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listViewRealEstateSet_House = new System.Windows.Forms.ListView();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // comboBoxAgents
@@ -89,13 +103,17 @@
             this.comboBoxClients.Size = new System.Drawing.Size(121, 21);
             this.comboBoxClients.TabIndex = 1;
             // 
-            // comboBoxRealEstate
+            // comboBoxType
             // 
-            this.comboBoxRealEstate.FormattingEnabled = true;
-            this.comboBoxRealEstate.Location = new System.Drawing.Point(3, 103);
-            this.comboBoxRealEstate.Name = "comboBoxRealEstate";
-            this.comboBoxRealEstate.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxRealEstate.TabIndex = 2;
+            this.comboBoxType.FormattingEnabled = true;
+            this.comboBoxType.Items.AddRange(new object[] {
+            "Квартира",
+            "Дом ",
+            "Земля"});
+            this.comboBoxType.Location = new System.Drawing.Point(3, 103);
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxType.TabIndex = 2;
             // 
             // textBoxMinPrice
             // 
@@ -303,6 +321,7 @@
             this.buttonEdit.TabIndex = 30;
             this.buttonEdit.Text = "изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonDel
             // 
@@ -312,6 +331,7 @@
             this.buttonDel.TabIndex = 31;
             this.buttonDel.Text = "удалить";
             this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // listViewRealEstateSet_Land
             // 
@@ -332,13 +352,14 @@
             this.listViewRealEstateSet_Land.FullRowSelect = true;
             this.listViewRealEstateSet_Land.GridLines = true;
             this.listViewRealEstateSet_Land.HideSelection = false;
-            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(150, 5);
+            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(311, 5);
             this.listViewRealEstateSet_Land.MultiSelect = false;
             this.listViewRealEstateSet_Land.Name = "listViewRealEstateSet_Land";
-            this.listViewRealEstateSet_Land.Size = new System.Drawing.Size(638, 119);
+            this.listViewRealEstateSet_Land.Size = new System.Drawing.Size(477, 93);
             this.listViewRealEstateSet_Land.TabIndex = 32;
             this.listViewRealEstateSet_Land.UseCompatibleStateImageBehavior = false;
             this.listViewRealEstateSet_Land.View = System.Windows.Forms.View.Details;
+            this.listViewRealEstateSet_Land.Visible = false;
             this.listViewRealEstateSet_Land.SelectedIndexChanged += new System.EventHandler(this.listViewRealEstateSet_Land_SelectedIndexChanged);
             // 
             // columnHeader10
@@ -393,11 +414,102 @@
             // 
             this.columnHeader37.Text = "макс кол этажей";
             // 
+            // listViewRealEstateSet_Apartment
+            // 
+            this.listViewRealEstateSet_Apartment.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listViewRealEstateSet_Apartment.FullRowSelect = true;
+            this.listViewRealEstateSet_Apartment.GridLines = true;
+            this.listViewRealEstateSet_Apartment.HideSelection = false;
+            this.listViewRealEstateSet_Apartment.Location = new System.Drawing.Point(150, 5);
+            this.listViewRealEstateSet_Apartment.MultiSelect = false;
+            this.listViewRealEstateSet_Apartment.Name = "listViewRealEstateSet_Apartment";
+            this.listViewRealEstateSet_Apartment.Size = new System.Drawing.Size(463, 68);
+            this.listViewRealEstateSet_Apartment.TabIndex = 33;
+            this.listViewRealEstateSet_Apartment.UseCompatibleStateImageBehavior = false;
+            this.listViewRealEstateSet_Apartment.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "риелтор";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "клиент";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "объект";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "min Цена";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Max цена";
+            // 
+            // listViewRealEstateSet_House
+            // 
+            this.listViewRealEstateSet_House.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19});
+            this.listViewRealEstateSet_House.FullRowSelect = true;
+            this.listViewRealEstateSet_House.GridLines = true;
+            this.listViewRealEstateSet_House.HideSelection = false;
+            this.listViewRealEstateSet_House.Location = new System.Drawing.Point(299, 127);
+            this.listViewRealEstateSet_House.MultiSelect = false;
+            this.listViewRealEstateSet_House.Name = "listViewRealEstateSet_House";
+            this.listViewRealEstateSet_House.Size = new System.Drawing.Size(463, 68);
+            this.listViewRealEstateSet_House.TabIndex = 34;
+            this.listViewRealEstateSet_House.UseCompatibleStateImageBehavior = false;
+            this.listViewRealEstateSet_House.View = System.Windows.Forms.View.Details;
+            this.listViewRealEstateSet_House.Visible = false;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Город";
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Улица";
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Номер дома";
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Номер квартиры";
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Ширина";
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Долгота";
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Площадь";
+            // 
             // FormDemand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listViewRealEstateSet_House);
+            this.Controls.Add(this.listViewRealEstateSet_Apartment);
             this.Controls.Add(this.listViewRealEstateSet_Land);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
@@ -425,7 +537,7 @@
             this.Controls.Add(this.textBoxMinRooms);
             this.Controls.Add(this.textBoxMinArea);
             this.Controls.Add(this.textBoxMinPrice);
-            this.Controls.Add(this.comboBoxRealEstate);
+            this.Controls.Add(this.comboBoxType);
             this.Controls.Add(this.comboBoxClients);
             this.Controls.Add(this.comboBoxAgents);
             this.Name = "FormDemand";
@@ -439,7 +551,7 @@
 
         private System.Windows.Forms.ComboBox comboBoxAgents;
         private System.Windows.Forms.ComboBox comboBoxClients;
-        private System.Windows.Forms.ComboBox comboBoxRealEstate;
+        private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.TextBox textBoxMinPrice;
         private System.Windows.Forms.TextBox textBoxMinArea;
         private System.Windows.Forms.TextBox textBoxMinRooms;
@@ -480,5 +592,19 @@
         private System.Windows.Forms.ColumnHeader columnHeader35;
         private System.Windows.Forms.ColumnHeader columnHeader36;
         private System.Windows.Forms.ColumnHeader columnHeader37;
+        private System.Windows.Forms.ListView listViewRealEstateSet_Apartment;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ListView listViewRealEstateSet_House;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
     }
 }
