@@ -56,31 +56,7 @@ namespace Esoft_Project
             }
 
         }
-        void ShowSupplySet()
-        {
-            listViewRealEstateSet_Land.Items.Clear();
-            foreach (DemandSet demand in Program.wftDB.DemandSet)
-            {
-                ListViewItem item = new ListViewItem(new string[]
-                {
-                  demand.IdAgent.ToString(),
-                  demand.IdClient.ToString(),
-                  demand.Type.ToString(),
-                  demand.MinPrice.ToString(),
-                  demand.MaxPrice.ToString(),
-                  demand.MaxRooms.ToString(),
-                  demand.MinRooms.ToString(),
-                  demand.MinArea.ToString(),
-                  demand.MaxArea.ToString(),
-                  demand.MinFloor.ToString(),
-                  demand.MaxFloor.ToString(),
-                  demand.MinFloors.ToString(),
-                  demand.MaxFloors.ToString()
-                });
-                item.Tag = demand;
-                listViewRealEstateSet_Apartment.Items.Add(item);
-            }
-        }
+
         void ShowRealEstateSet()
         {
             listViewRealEstateSet_Apartment.Items.Clear();

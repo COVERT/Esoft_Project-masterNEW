@@ -352,14 +352,13 @@
             this.listViewRealEstateSet_Land.FullRowSelect = true;
             this.listViewRealEstateSet_Land.GridLines = true;
             this.listViewRealEstateSet_Land.HideSelection = false;
-            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(311, 5);
+            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(285, 159);
             this.listViewRealEstateSet_Land.MultiSelect = false;
             this.listViewRealEstateSet_Land.Name = "listViewRealEstateSet_Land";
             this.listViewRealEstateSet_Land.Size = new System.Drawing.Size(477, 93);
             this.listViewRealEstateSet_Land.TabIndex = 32;
             this.listViewRealEstateSet_Land.UseCompatibleStateImageBehavior = false;
             this.listViewRealEstateSet_Land.View = System.Windows.Forms.View.Details;
-            this.listViewRealEstateSet_Land.Visible = false;
             this.listViewRealEstateSet_Land.SelectedIndexChanged += new System.EventHandler(this.listViewRealEstateSet_Land_SelectedIndexChanged);
             // 
             // columnHeader10
@@ -425,7 +424,7 @@
             this.listViewRealEstateSet_Apartment.FullRowSelect = true;
             this.listViewRealEstateSet_Apartment.GridLines = true;
             this.listViewRealEstateSet_Apartment.HideSelection = false;
-            this.listViewRealEstateSet_Apartment.Location = new System.Drawing.Point(150, 5);
+            this.listViewRealEstateSet_Apartment.Location = new System.Drawing.Point(285, 21);
             this.listViewRealEstateSet_Apartment.MultiSelect = false;
             this.listViewRealEstateSet_Apartment.Name = "listViewRealEstateSet_Apartment";
             this.listViewRealEstateSet_Apartment.Size = new System.Drawing.Size(463, 68);
@@ -466,30 +465,29 @@
             this.listViewRealEstateSet_House.FullRowSelect = true;
             this.listViewRealEstateSet_House.GridLines = true;
             this.listViewRealEstateSet_House.HideSelection = false;
-            this.listViewRealEstateSet_House.Location = new System.Drawing.Point(299, 127);
+            this.listViewRealEstateSet_House.Location = new System.Drawing.Point(285, 85);
             this.listViewRealEstateSet_House.MultiSelect = false;
             this.listViewRealEstateSet_House.Name = "listViewRealEstateSet_House";
             this.listViewRealEstateSet_House.Size = new System.Drawing.Size(463, 68);
             this.listViewRealEstateSet_House.TabIndex = 34;
             this.listViewRealEstateSet_House.UseCompatibleStateImageBehavior = false;
             this.listViewRealEstateSet_House.View = System.Windows.Forms.View.Details;
-            this.listViewRealEstateSet_House.Visible = false;
             // 
             // columnHeader13
             // 
-            this.columnHeader13.Text = "Город";
+            this.columnHeader13.Text = "риелтор";
             // 
             // columnHeader14
             // 
-            this.columnHeader14.Text = "Улица";
+            this.columnHeader14.Text = "клиент";
             // 
             // columnHeader15
             // 
-            this.columnHeader15.Text = "Номер дома";
+            this.columnHeader15.Text = "объект";
             // 
             // columnHeader16
             // 
-            this.columnHeader16.Text = "Номер квартиры";
+            this.columnHeader16.Text = "мин цена";
             // 
             // columnHeader17
             // 
