@@ -450,7 +450,6 @@
             this.listViewRealEstateSet_House.TabIndex = 34;
             this.listViewRealEstateSet_House.UseCompatibleStateImageBehavior = false;
             this.listViewRealEstateSet_House.View = System.Windows.Forms.View.Details;
-            this.listViewRealEstateSet_House.Visible = false;
             // 
             // columnHeader13
             // 

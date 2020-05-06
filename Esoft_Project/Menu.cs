@@ -53,5 +53,11 @@ namespace Esoft_Project
             formSupply.Show();
 
         }
+
+        private void buttonOpenDeals_Click(object sender, EventArgs e)
+        {
+            Form FormDeal = new FormDeal();
+            FormDeal.Show();
+        }
     }
 }

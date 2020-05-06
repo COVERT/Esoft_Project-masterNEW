@@ -25,6 +25,7 @@ namespace Esoft_Project
             Application.Run(new FormAgent());
             Application.Run(new FormSupply());
             Application.Run(new FormDemand());
+            Application.Run(new FormDeal());
         }
     }
 }
