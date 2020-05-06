@@ -169,6 +169,7 @@ namespace Esoft_Project
                 Program.wftDB.DemandSet.Add(demand);
                 Program.wftDB.SaveChanges();
                 ShowRealEstateSet();
+                
 
             }
 
@@ -244,75 +245,8 @@ namespace Esoft_Project
                 MessageBox.Show(" не возможно удалить");
             }
         }
-        private void comboBoxRealEstate_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxType.SelectedIndex == 0)
-            {
-                listViewRealEstateSet_Apartment.Visible = true;
-                labelMinFloor.Visible = true;
-                textBoxMinFloor.Visible = true;
-                labelMaxFloor.Visible = true;
-                textBoxMaxFloor.Visible = true;
-                labelMinRooms.Visible = true;
-                textBoxMinRooms.Visible = true;
-                labelMaxRooms.Visible = true;
-                textBoxMaxRooms.Visible = true;
-
-                listViewRealEstateSet_House.Visible = false;
-                listViewRealEstateSet_Land.Visible = false;
-                labelMinFloors.Visible = false;
-                textBoxMinFloors.Visible = false;
-                labelMaxFloor.Visible = false;
-                textBoxMaxFloors.Visible = false;
-
-                textBoxMinFloor.Text = "";
-                textBoxMaxFloor.Text = "";
-                textBoxMinRooms.Text = "";
-                textBoxMaxRooms.Text = "";
-            }
-            else if (comboBoxType.SelectedIndex == 1)
-            {
-                listViewRealEstateSet_House.Visible = true;
-                labelMinRooms.Visible = true;
-                textBoxMinRooms.Visible = true;
-                labelMaxRooms.Visible = true;
-                textBoxMaxRooms.Visible = true;
-                labelMinFloors.Visible = true;
-                textBoxMinFloors.Visible = true;
-                labelMamFloors.Visible = true;
-                textBoxMaxFloors.Visible = true;
-
-                listViewRealEstateSet_Apartment.Visible = false;
-                listViewRealEstateSet_Land.Visible = false;
-                labelMinFloor.Visible = false;
-                textBoxMinFloor.Visible = false;
-                labelMaxFloor.Visible = false;
-                textBoxMaxFloor.Visible = false;
-                textBoxMinFloors.Text = "";
-                textBoxMaxFloors.Text = "";
-                textBoxMinRooms.Text = "";
-                textBoxMaxRooms.Text = "";
-            }
-            else
-            {
-                listViewRealEstateSet_Land.Visible = true;
-                labelMinRooms.Visible = false;
-                textBoxMinRooms.Visible = false;
-                labelMaxRooms.Visible = false;
-                textBoxMaxRooms.Visible = false;
-                labelMinFloors.Visible = false;
-                textBoxMinFloors.Visible = false;
-                labelMamFloors.Visible = false;
-                textBoxMaxFloors.Visible = false;
-
-                listViewRealEstateSet_Apartment.Visible = false;
-                listViewRealEstateSet_House.Visible = false;
-                labelMinFloor.Visible = false;
-                textBoxMinFloor.Visible = false;
-                labelMaxFloor.Visible = false;
-                textBoxMaxFloor.Visible = false;
-            }
-        }
+        
+        
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
@@ -373,5 +307,77 @@ namespace Esoft_Project
                 }
             }
         }
+
+        private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+    {
+        if (comboBoxType.SelectedIndex == 0)
+        {
+            listViewRealEstateSet_Apartment.Visible = true;
+            labelMinFloor.Visible = true;
+            textBoxMinFloor.Visible = true;
+            labelMaxFloor.Visible = true;
+            textBoxMaxFloor.Visible = true;
+            labelMinRooms.Visible = true;
+            textBoxMinRooms.Visible = true;
+            labelMaxRooms.Visible = true;
+            textBoxMaxRooms.Visible = true;
+
+            listViewRealEstateSet_House.Visible = false;
+            listViewRealEstateSet_Land.Visible = false;
+            labelMinFloors.Visible = false;
+            textBoxMinFloors.Visible = false;
+            labelMaxFloor.Visible = false;
+            textBoxMaxFloors.Visible = false;
+
+            textBoxMinFloor.Text = "";
+            textBoxMaxFloor.Text = "";
+            textBoxMinRooms.Text = "";
+            textBoxMaxRooms.Text = "";
+        }
+        else if (comboBoxType.SelectedIndex == 1)
+        {
+            listViewRealEstateSet_House.Visible = true;
+            labelMinRooms.Visible = true;
+            textBoxMinRooms.Visible = true;
+            labelMaxRooms.Visible = true;
+            textBoxMaxRooms.Visible = true;
+            labelMinFloors.Visible = true;
+            textBoxMinFloors.Visible = true;
+            labelMamFloors.Visible = true;
+            textBoxMaxFloors.Visible = true;
+
+            listViewRealEstateSet_Apartment.Visible = false;
+            listViewRealEstateSet_Land.Visible = false;
+            labelMinFloor.Visible = false;
+            textBoxMinFloor.Visible = false;
+            labelMaxFloor.Visible = false;
+            textBoxMaxFloor.Visible = false;
+            textBoxMinFloors.Text = "";
+            textBoxMaxFloors.Text = "";
+            textBoxMinRooms.Text = "";
+            textBoxMaxRooms.Text = "";
+        }
+        else if (comboBoxType.SelectedIndex == 2)
+        {
+            listViewRealEstateSet_Land.Visible = true;
+            labelMinRooms.Visible = false;
+            textBoxMinRooms.Visible = false;
+            labelMaxRooms.Visible = false;
+            textBoxMaxRooms.Visible = false;
+            labelMinFloors.Visible = false;
+            textBoxMinFloors.Visible = false;
+            labelMamFloors.Visible = false;
+            textBoxMaxFloors.Visible = false;
+
+            listViewRealEstateSet_Apartment.Visible = false;
+            listViewRealEstateSet_House.Visible = false;
+            labelMinFloor.Visible = false;
+            textBoxMinFloor.Visible = false;
+            labelMaxFloor.Visible = false;
+            textBoxMaxFloor.Visible = false;
+        }
+    }
+}
     }
 }

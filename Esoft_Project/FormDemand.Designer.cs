@@ -114,6 +114,7 @@
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(121, 21);
             this.comboBoxType.TabIndex = 2;
+            this.comboBoxType.SelectedIndexChanged += new System.EventHandler(this.comboBoxType_SelectedIndexChanged);
             // 
             // textBoxMinPrice
             // 
@@ -346,7 +347,7 @@
             this.listViewRealEstateSet_Land.FullRowSelect = true;
             this.listViewRealEstateSet_Land.GridLines = true;
             this.listViewRealEstateSet_Land.HideSelection = false;
-            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(225, 21);
+            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(225, -2);
             this.listViewRealEstateSet_Land.MultiSelect = false;
             this.listViewRealEstateSet_Land.Name = "listViewRealEstateSet_Land";
             this.listViewRealEstateSet_Land.Size = new System.Drawing.Size(523, 126);
@@ -401,7 +402,7 @@
             this.listViewRealEstateSet_Apartment.FullRowSelect = true;
             this.listViewRealEstateSet_Apartment.GridLines = true;
             this.listViewRealEstateSet_Apartment.HideSelection = false;
-            this.listViewRealEstateSet_Apartment.Location = new System.Drawing.Point(225, 21);
+            this.listViewRealEstateSet_Apartment.Location = new System.Drawing.Point(225, -2);
             this.listViewRealEstateSet_Apartment.MultiSelect = false;
             this.listViewRealEstateSet_Apartment.Name = "listViewRealEstateSet_Apartment";
             this.listViewRealEstateSet_Apartment.Size = new System.Drawing.Size(523, 126);
@@ -442,7 +443,7 @@
             this.listViewRealEstateSet_House.FullRowSelect = true;
             this.listViewRealEstateSet_House.GridLines = true;
             this.listViewRealEstateSet_House.HideSelection = false;
-            this.listViewRealEstateSet_House.Location = new System.Drawing.Point(225, 21);
+            this.listViewRealEstateSet_House.Location = new System.Drawing.Point(225, -2);
             this.listViewRealEstateSet_House.MultiSelect = false;
             this.listViewRealEstateSet_House.Name = "listViewRealEstateSet_House";
             this.listViewRealEstateSet_House.Size = new System.Drawing.Size(523, 126);
