@@ -50,6 +50,8 @@
             this.labelAgentSellerDeductions = new System.Windows.Forms.Label();
             this.labelCustomerCompanyDeductions = new System.Windows.Forms.Label();
             this.labelAgentCustomerDeductions = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxSellerCompanyDeductions
@@ -233,11 +235,22 @@
             this.labelAgentCustomerDeductions.TabIndex = 44;
             this.labelAgentCustomerDeductions.Text = "Отчисление риелтору клиента-покупателя";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Esoft_Project.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 256);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 45;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormDeal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelAgentCustomerDeductions);
             this.Controls.Add(this.labelCustomerCompanyDeductions);
             this.Controls.Add(this.labelAgentSellerDeductions);
@@ -256,6 +269,7 @@
             this.Controls.Add(this.textBoxSellerCompanyDeductions);
             this.Name = "FormDeal";
             this.Text = "сделки";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,5 +299,6 @@
         private System.Windows.Forms.Label labelAgentSellerDeductions;
         private System.Windows.Forms.Label labelCustomerCompanyDeductions;
         private System.Windows.Forms.Label labelAgentCustomerDeductions;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

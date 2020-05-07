@@ -71,6 +71,12 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listViewRealEstateSet_House = new System.Windows.Forms.ListView();
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -79,12 +85,8 @@
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxAgents
@@ -430,6 +432,30 @@
             // 
             this.columnHeader5.Text = "Max цена";
             // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "мин комнат";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "макс комнат";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "мин этажей";
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "макс этажей";
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "мин кол этажей";
+            // 
+            // columnHeader26
+            // 
+            this.columnHeader26.Text = "макс кол этажей";
+            // 
             // listViewRealEstateSet_House
             // 
             this.listViewRealEstateSet_House.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -479,35 +505,22 @@
             // 
             this.columnHeader19.Text = "макс S";
             // 
-            // columnHeader6
+            // pictureBox1
             // 
-            this.columnHeader6.Text = "мин комнат";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "макс комнат";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "мин этажей";
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "макс этажей";
-            // 
-            // columnHeader25
-            // 
-            this.columnHeader25.Text = "мин кол этажей";
-            // 
-            // columnHeader26
-            // 
-            this.columnHeader26.Text = "макс кол этажей";
+            this.pictureBox1.Image = global::Esoft_Project.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 320);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
             // 
             // FormDemand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listViewRealEstateSet_House);
             this.Controls.Add(this.listViewRealEstateSet_Apartment);
             this.Controls.Add(this.listViewRealEstateSet_Land);
@@ -542,6 +555,7 @@
             this.Controls.Add(this.comboBoxAgents);
             this.Name = "FormDemand";
             this.Text = "FormDemand";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,5 +620,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader25;
         private System.Windows.Forms.ColumnHeader columnHeader26;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

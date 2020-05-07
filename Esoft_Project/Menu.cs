@@ -15,6 +15,8 @@ namespace Esoft_Project
         public Menu()
         {
             InitializeComponent();
+            if (FormAuthorization.users.type == "agent") buttonOpenAgents.Enabled = false;
+            labelHello.Text = "Привествую тебя, !" + FormAuthorization.users.login;
         }
 
         private void Menu_Load(object sender, EventArgs e)
